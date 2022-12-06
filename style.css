@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url(./img/board-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.author {
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: -3px -1px 0 #b02157, 3px 1px 0 #e7a538;
+    color: white;
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.points,
+.message {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 60px;
+    text-shadow: -3px -1px 0 #b02157, 3px 1px 0 #e7a538;
+    color: white;
+}
+
+.points {
+    text-align: right;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+}
+
+.crosshair {
+    display: none;
+    border: 5px solid #fffa;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9;
+}
+
+.crosshair>div {
+    margin: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    vertical-align: middle;
+}
+
+.board {
+    width: 100%;
+    height: 100%;
+}
+
+.board>.message {
+    position: absolute;
+    bottom: 1em;
+    width: 100%;
+    text-align: center;
+    cursor: default;
+}
+
+#start {
+    cursor: pointer;
+}
+
+a:hover,
+#start:hover {
+    text-decoration: underline;
+}
+
+.zombie {
+    width: 200px;
+    height: 312px;
+    background-image: url(./img/walkingdead.png);
+    background-position-x: 100%;
+    background-position-y: center;
+    background-size: cover;
+    position: absolute;
+    transition: .5s opacity;
+}
